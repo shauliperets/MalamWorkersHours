@@ -1,0 +1,16 @@
+Root> dotnet new webapi -n Backend
+
+Backend> dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+Backend> dotnet add package Microsoft.EntityFrameworkCore.Design
+Backend> dotnet add package Microsoft.AspNetCore.Cors
+
+Backend> dotnet add package Microsoft.AspNetCore.Cors
+
+Backend> dotnet ef migrations add InitialCreate
+Backend> dotnet ef database update
+
+Root> npx create-react-app Frontend
+
+To run from visual studio code:
+Backend> dotnet watch
+Frontend> npm start
