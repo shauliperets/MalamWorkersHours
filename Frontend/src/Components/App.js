@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./App.css";
 import WorkerHoursForm from "./WorkerHoursForm";
-import WorkerTable from "./WorkerHoursTable";
+import WorkersHoursTable from "./WorkersHoursTable";
 
 function App() {
   const [workersHours, setWorkersHours] = useState([]);
 
   return (
     <div className="App">
-      <WorkerTable workersHours={workersHours} setWorkersHours={setWorkersHours}></WorkerTable>
+      <WorkersHoursTable workersHours={workersHours} setWorkersHours={setWorkersHours}></WorkersHoursTable>
       <WorkerHoursForm workersHours={workersHours} setWorkersHours={setWorkersHours}></WorkerHoursForm>
     </div>
   );

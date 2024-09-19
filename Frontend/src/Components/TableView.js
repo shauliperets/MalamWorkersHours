@@ -1,20 +1,12 @@
 import React from "react";
 
-import { useEffect } from "react";
-
 const TableView = ({ data, columns }) => {
-  useEffect(() => {
-    //fetchWorkersHours();
-    console.log("Table load. data: ", data);
-    console.log("Table load. columns: ", columns);
-  }, []);
-
   return (
     <div className="table">
       <div className="table-header">
         {columns.map((col, index) => (
           <div key={index} className="table-header-cell">
-            {col}
+            {col.name}
           </div>
         ))}
       </div>
@@ -23,7 +15,7 @@ const TableView = ({ data, columns }) => {
           <div key={rowIndex} className="table-row">
             {columns.map((col, colIndex) => (
               <div key={colIndex} className="table-cell">
-                {row[col]}
+                {row[col.id]}
               </div>
             ))}
           </div>

@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-//import axios from "axios";
 import { api } from "../Services/api";
 import TableView from "./TableView";
 
-const WorkerHoursTable = (props) => {
+const WorkersHoursTable = (props) => {
   useEffect(() => {
     api.getWorkersHours().then((response) => {
       props.setWorkersHours(response.data);
@@ -14,10 +13,16 @@ const WorkerHoursTable = (props) => {
     <div>
       <TableView
         data={props.workersHours}
-        columns={["id", "workerName", "taskName", "startDate", "endDate"]}
+        columns={[
+          { id: "id", name: "Id" },
+          { id: "workerName", name: "Worker name" },
+          { id: "taskName", name: "Task name" },
+          { id: "startDate", name: "Start name" },
+          { id: "endDate", name: "End name" },
+        ]}
       ></TableView>
     </div>
   );
 };
 
-export default WorkerHoursTable;
+export default WorkersHoursTable;

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-//import axios from "axios";
 import { api } from "../Services/api";
 
 const WorkerHoursForm = (props) => {
@@ -31,15 +30,27 @@ const WorkerHoursForm = (props) => {
         value={workerName}
         onChange={(event) => setWorkerName(event.target.value)}
         placeholder="Worker Name"
+        className="worker-hours-form_input"
       />
       <input
         type="text"
         value={taskName}
         onChange={(event) => setTaskName(event.target.value)}
         placeholder="Task Name"
+        className="worker-hours-form_input"
       />
-      <input type="datetime-local" value={startDate} onChange={(event) => setStartDate(event.target.value)} />
-      <input type="datetime-local" value={endDate} onChange={(event) => setEndDate(event.target.value)} />
+      <input
+        type="datetime-local"
+        className="worker-hours-form_input"
+        value={startDate}
+        onChange={(event) => setStartDate(event.target.value)}
+      />
+      <input
+        type="datetime-local"
+        className="worker-hours-form_input"
+        value={endDate}
+        onChange={(event) => setEndDate(event.target.value)}
+      />
 
       <button type="submit">Add</button>
     </form>

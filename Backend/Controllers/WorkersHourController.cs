@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace WorkersHoursAPI.Controllers
 {
-    //[Route("api/[controller]")]
     [ApiController]
     public class WorkersHoursController : ControllerBase
     {

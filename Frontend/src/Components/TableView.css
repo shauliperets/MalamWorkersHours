@@ -1,6 +1,5 @@
 .table {
   display: table;
-  width: 100%;
   border-collapse: collapse;
 }
 
@@ -28,4 +27,5 @@
   display: table-cell;
   padding: 8px;
   border: 1px solid #ddd;
+  width: 200px;
 }
